@@ -1,0 +1,60 @@
+   ▲ Next.js 15.5.14 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.66:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Compiled middleware in 83ms
+ ✓ Ready in 708ms
+ ○ Compiling / ...
+ ✓ Compiled / in 3.4s
+ GET / 200 in 3769ms
+ GET / 200 in 56ms
+ ✓ Compiled /favicon.ico in 165ms
+ GET /favicon.ico?favicon.0b3bf435.ico 200 in 416ms
+ ✓ Compiled /api/chat in 164ms
+{
+  error: [Error [AI_APICallError]: Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.] {
+    cause: undefined,
+    url: 'https://api.anthropic.com/v1/messages',
+    requestBodyValues: {
+      model: 'claude-haiku-4-5',
+      max_tokens: 10000,
+      temperature: 0,
+      top_k: undefined,
+      top_p: undefined,
+      stop_sequences: undefined,
+      system: [Array],
+      messages: [Array],
+      tools: [Array],
+      tool_choice: [Object],
+      stream: true
+    },
+    statusCode: 400,
+    responseHeaders: {
+      'anthropic-organization-id': '38427ce7-c892-43e2-9f50-56b8e5c2d88d',
+      'cf-cache-status': 'DYNAMIC',
+      'cf-ray': '9e0689bf292ad748-NRT',
+      connection: 'keep-alive',
+      'content-encoding': 'gzip',
+      'content-security-policy': "default-src 'none'; frame-ancestors 'none'",
+      'content-type': 'application/json',
+      date: 'Sun, 22 Mar 2026 16:22:57 GMT',
+      'request-id': 'req_011CZJRis8os2Sjku9EJmgYL',
+      server: 'cloudflare',
+      'server-timing': 'x-originResponse;dur=159',
+      'set-cookie': '_cfuvid=BqkHDGDFGzRO6t.iU3p6F6T3OHhe3v6JrkWurOYgV0I-1774196577.1412208-1.0.1.1-HC9FudJNebHKTUG0kv8ig32TDkSsSi.kJs4SvPAct0w; HttpOnly; SameSite=None; Secure; Path=/; Domain=api.anthropic.com',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains; preload',
+      'transfer-encoding': 'chunked',
+      vary: 'Accept-Encoding',
+      'x-envoy-upstream-service-time': '158',
+      'x-robots-tag': 'none',
+      'x-should-retry': 'false'
+    },
+    responseBody: '{"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CZJRis8os2Sjku9EJmgYL"}',
+    isRetryable: false,
+    data: { type: 'error', error: [Object] }
+  }
+}
+ POST /api/chat 200 in 933ms
+ ✓ Compiled in 45ms
